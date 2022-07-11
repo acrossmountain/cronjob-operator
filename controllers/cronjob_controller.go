@@ -253,7 +253,7 @@ func (r *CronJobReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ct
 			lastMissed = t
 			starts++
 			if starts > 100 {
-				return time.Time{}, time.Time{}, fmt.Errorf("too many missed start times (> 100). Set or decrease .spec.startingDeadlineSeconds or check clock skew.")
+				return time.Time{}, time.Time{}, fmt.Errorf("too many missed start times (> 100). set or decrease .spec.startingDeadlineSeconds or check clock skew")
 			}
 		}
 
